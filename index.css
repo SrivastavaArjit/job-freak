@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  background-color: #000;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navlink {
+  font-weight: 600;
+  font-size: 1.5rem;
+  position: relative;
+  padding-block: 2px;
+}
+
+.navlink::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  border-radius: 1px;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.35s ease;
+}
+
+.navlink:hover::after {
+  width: 100%;
+  transition: all 0.35s ease;
+}
+
+nav {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #d2e2fe;
+  align-items: center;
+  border-radius: 0 30px 30px 0;
+  width: 100%;
+  height: 50%;
+}
+
+main {
+  position: relative;
+  width: 80%;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffcb70;
+  border-radius: 30px 0 0 30px;
+  position: absolute;
+  width: 93%;
+  height: 90%;
+  inset: 0;
+  margin-block: auto;
+  margin-left: 7%;
+  font-size: 30px;
+  color: black;
+  font-weight: 600;
+}
+
+.panel {
+  display: none;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.show {
+  display: block;
+}
+
+svg {
+  font-size: 64px;
+  margin-inline: 20px;
+}
+
+span {
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(102, 51, 153, 1) 25%,
+    rgba(2, 0, 4, 1) 91.1%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: 300%;
+  color: transparent;
+  font-size: 38px;
+  font-weight: 800;
+  animation: bg 6s linear infinite;
+}
+
+@keyframes bg {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
